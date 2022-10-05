@@ -4,6 +4,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
     path: 'content2',
     component: Content2Component,
   },
+  { path: 'login', component: LoginPageComponent },
 ];
 
 @NgModule({
