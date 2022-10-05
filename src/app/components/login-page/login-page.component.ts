@@ -22,7 +22,6 @@ export class LoginPageComponent implements OnInit, OnDestroy {
       email: ['', Validators.required],
       password: ['', Validators.required],
     });
-    console.log(this.loginService.loggedIn);
   }
 
   ngOnInit(): void {}

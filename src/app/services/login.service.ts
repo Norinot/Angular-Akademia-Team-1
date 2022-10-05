@@ -10,7 +10,7 @@ export class LoginService {
   constructor() {}
 
   login(email: string, password: string) {
-    if (email === 'admin@gmail.com' && password === 'admin') {
+    if (email === '' && password === '') {
       this.loggedIn = true;
     } else {
       this.loggedIn = false;
