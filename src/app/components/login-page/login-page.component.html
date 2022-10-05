@@ -1,0 +1,25 @@
+<div class="form-container">
+  <form [formGroup]="login_form" (ngSubmit)="onSubmit()" class="login-form">
+    <div class="input-group">
+      <input
+        class="form-input"
+        type="text"
+        placeholder="Email address"
+        formControlName="email"
+        id="email"
+      />
+    </div>
+
+    <div class="input-group">
+      <input
+        class="form-input"
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        id="password"
+      />
+    </div>
+    <button class="form-button" type="submit">LOGIN</button>
+    <div *ngIf="invalidLoginMessage" class="form-alert">Incorrect credentials! Please check your email and password.</div>
+  </form>
+</div>
