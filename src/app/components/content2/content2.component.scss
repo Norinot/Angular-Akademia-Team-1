@@ -1,0 +1,31 @@
+.flex-container {
+  //Display
+  display: flex;
+
+  //Positioning
+  position: absolute;
+
+  //Centering
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cube {
+  //Dimensions
+  height: 100px;
+  width: 100px;
+}
+
+.cube1 {
+  //Background
+  background-color: #011126;
+}
+.cube2 {
+  //Background
+  background-color: #193140;
+}
+.cube3 {
+  //Background
+  background-color: #407344;
+}
