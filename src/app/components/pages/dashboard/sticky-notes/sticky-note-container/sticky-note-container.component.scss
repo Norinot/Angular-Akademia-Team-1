@@ -1,5 +1,6 @@
+$width-of-container: calc(100% - 400px) ;
 .sticky-note-container{
-    width: 100%;
+    width: $width-of-container;
     height: 100%;
     position: absolute;
 }
