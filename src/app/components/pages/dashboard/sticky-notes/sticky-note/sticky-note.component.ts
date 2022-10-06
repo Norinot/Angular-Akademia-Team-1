@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StickyNoteService } from 'src/app/services/sticky-note.service';
 
 @Component({
   selector: 'app-sticky-note',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StickyNoteComponent implements OnInit {
 
-  constructor() { }
+  constructor(public stickyService: StickyNoteService) { }
 
   ngOnInit(): void {
   }

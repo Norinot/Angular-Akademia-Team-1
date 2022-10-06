@@ -1,4 +1,5 @@
 export class StickyNote {
   id: number = 0;
-  text: string = "";
+  title: string = "";
+  content: string = "";
 }

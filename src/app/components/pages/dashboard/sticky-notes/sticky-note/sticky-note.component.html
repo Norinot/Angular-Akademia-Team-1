@@ -1,1 +1,8 @@
-<p>sticky-note works!</p>
+<ul>
+  <li *ngFor="let item of stickyService.notes">
+    <div>
+      <h2>{{item.title}}</h2>
+      <p>{{item.content}}</p>
+    </div>
+  </li>
+</ul>
