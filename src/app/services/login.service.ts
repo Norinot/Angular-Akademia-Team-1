@@ -20,4 +20,9 @@ export class LoginService {
       console.log('failed login');
     }
   }
+
+  logout() {
+    this.loggedIn = false;
+    this.router.navigate(['']);
+  }
 }

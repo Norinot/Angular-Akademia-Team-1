@@ -25,3 +25,24 @@ li a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
+.logout-btn{
+  position: absolute;
+
+
+  bottom: 0;
+  height: 40px;
+
+  border-radius: 5px;
+
+  width: 80%;
+
+  background-color: #011126;
+  color: white;
+  cursor: pointer;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logout-btn:hover{
+  background-color: #193140;
+}
