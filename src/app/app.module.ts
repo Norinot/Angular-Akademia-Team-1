@@ -16,11 +16,6 @@ import { StickyNoteFormComponent } from './components/pages/dashboard/sticky-not
 import { StickyNoteContainerComponent } from './components/pages/dashboard/sticky-notes/sticky-note-container/sticky-note-container.component';
 import { StickyNoteComponent } from './components/pages/dashboard/sticky-notes/sticky-note/sticky-note.component';
 
-  // const routes: Routes = [
-  //   { path: 'div-main', component: MainComponent },
-  //   { path: 'login', component: LoginPageComponent },
-  // ];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,16 +32,8 @@ import { StickyNoteComponent } from './components/pages/dashboard/sticky-notes/s
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    // RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-// MainComponent,
-//     Content2Component,
-//     DashboardComponent,
-//     SidenavComponent,
-//     LoginPageComponent,

@@ -1,1 +1,4 @@
-<p>sticky-note-form works!</p>
+<form [formGroup]="notesForm" (ngSubmit)="onSubmit()">
+  <input type="text" class="form-control" name="note" placeholder="sticky note text" formControlName="note">
+  <button type="submit">Add Note</button>
+</form>
