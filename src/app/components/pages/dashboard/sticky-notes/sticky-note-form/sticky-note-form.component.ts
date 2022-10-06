@@ -34,7 +34,7 @@ export class StickyNoteFormComponent implements OnInit {
   onSubmit() {
     const savedNote: StickyNote = this.notesForm.value as StickyNote;
     this.notesService.addNote(savedNote);
-    // this.router.navigate(['/', 'sticky-notes-container', '/', 'sticky-note']);
+    this.router.navigate(['/dashboard/sticky-notes-container'])
   }
 
 }
