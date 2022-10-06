@@ -16,6 +16,12 @@ export class LoginService {
       this.router.navigate(['dashboard']);
     } else {
       this.loggedIn = false;
+      console.log('failed login');
     }
+  }
+
+  logout() {
+    this.loggedIn = false;
+    this.router.navigate(['']);
   }
 }

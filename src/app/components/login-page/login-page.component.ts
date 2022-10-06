@@ -31,6 +31,8 @@ export class LoginPageComponent implements OnInit, OnDestroy {
       this.login_form.value.email,
       this.login_form.value.password
     );
+    console.log('componens login');
+
     if (this.loginService.loggedIn === false) {
       this.invalidLoginMessage = true;
       setTimeout(() => {
