@@ -1,0 +1,32 @@
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: normal;
+
+  overflow-wrap: break-word;
+}
+
+ul,
+li {
+  list-style: none;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul li div {
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  width:10em;
+  padding:1em;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+ul li {
+  margin: 1em;
+}
