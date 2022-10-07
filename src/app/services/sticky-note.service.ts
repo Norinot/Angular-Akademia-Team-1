@@ -10,18 +10,17 @@ export class StickyNoteService {
   classes: any[] = [
     {
       AlignClass: 'align-content-flex-start',
-      // imgUrl: '../../assets/Alignment-icons/align-top.png',
       imgUrl: './assets/Alignment-icons/align-top.png',
       placeholderText: 'Align top',
     },
     {
       AlignClass: 'align-content-center',
-      imgUrl: '../../assets/Alignment-icons/align-center.png',
+      imgUrl: './assets/Alignment-icons/align-center.png',
       placeholderText: 'Align center',
     },
     {
       AlignClass: 'align-content-flex-end',
-      imgUrl: '../../assets/Alignment-icons/align-bottom.png',
+      imgUrl: './assets/Alignment-icons/align-bottom.png',
       placeholderText: 'Align bottom',
     },
     {
@@ -31,12 +30,12 @@ export class StickyNoteService {
     },
     {
       JustifyClass: 'justify-content-flex-start',
-      imgUrl: '../../assets/Alignment-icons/justify-left.svg',
+      imgUrl: './assets/Alignment-icons/justify-left.svg',
       placeholderText: 'Justify left',
     },
     {
       JustifyClass: 'justify-content-flex-center',
-      imgUrl: '../../assets/Alignment-icons/justify-center.png',
+      imgUrl: './assets/Alignment-icons/justify-center.png',
       placeholderText: 'Justify center',
     },
     {
