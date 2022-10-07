@@ -1,4 +1,4 @@
-<ul>
+<ul [ngClass]="stickyService.selectedAlignContent + ' ' + stickyService.selectedJustifyContent">
   <li *ngFor="let item of stickyService.notes">
     <div>
       <h2>{{item.title}}</h2>

@@ -1,24 +1,46 @@
-$width-of-container: calc(100% - 400px) ;
-.sticky-note-container{
-    height: 100%;
-    position: absolute;
+$width-of-container: calc(100% - 400px);
+.sticky-note-container {
+  height: 100%;
+  position: absolute;
 }
-.to-form-button{
-    top: 0;
-    right: 0;
-    z-index: 1;
-    margin: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    &:hover{
-        background-color: #ccc;
-    }
+.button-container{
+  display: flex;
+}
+.to-form-button, .button-first {
+  top: 0;
+  right: 0;
+  z-index: 1;
+  margin: 10px;
+  margin-top: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #ccc;
+  }
+}
+img{
+  width: 20px;
+  height: 20px;
+}
+.button-first{
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(166, 166, 166);
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #ccc;
+  }
+
 }

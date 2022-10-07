@@ -1,5 +1,14 @@
 <div class="sticky-note-container">
-  <button [routerLink]="['sticky-note-form']" class="to-form-button">➕</button>
-
+  <div class="button-container">
+    <button [routerLink]="['sticky-note-form']" class="to-form-button">➕</button>
+    <ng-container *ngFor="let item of stickyService.classes">
+      <button class="button-first" (click)="stickyService.onAddStyling(item)">
+        <img src="{{ item.imgUrl }}" alt="" />
+      </button>
+    </ng-container>
+  </div>
   <router-outlet></router-outlet>
 </div>
+
+<!--
+[ngClass]="item.btnClass" -->
