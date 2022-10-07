@@ -25,7 +25,7 @@ export class StickyNoteService {
     },
     {
       AlignClass: 'align-content-space-around',
-      imgUrl: '',
+      imgUrl: './assets/Alignment-icons/align-space-around.png',
       placeholderText: 'Align Space around',
     },
     {
@@ -45,7 +45,7 @@ export class StickyNoteService {
     },
     {
       JustifyClass: 'justify-content-space-between',
-      imgUrl: '',
+      imgUrl: './assets/Alignment-icons/justify-space-between.png',
       placeholderText: 'Justify space between',
     },
   ];
