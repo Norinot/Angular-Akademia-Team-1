@@ -11,31 +11,42 @@ export class StickyNoteService {
     {
       AlignClass: 'align-content-flex-start',
       imgUrl: '../../assets/Alignment-icons/align-top.png',
+      placeholderText: 'Align top',
     },
     {
       AlignClass: 'align-content-center',
       imgUrl: '../../assets/Alignment-icons/align-center.png',
-
+      placeholderText: 'Align center',
     },
     {
       AlignClass: 'align-content-flex-end',
       imgUrl: '../../assets/Alignment-icons/align-bottom.png',
-
+      placeholderText: 'Align bottom',
+    },
+    {
+      AlignClass: 'align-content-space-around',
+      imgUrl: '',
+      placeholderText: 'Align Space around',
     },
     {
       JustifyClass: 'justify-content-flex-start',
       imgUrl: '../../assets/Alignment-icons/justify-left.svg',
-
+      placeholderText: 'Justify left',
     },
     {
       JustifyClass: 'justify-content-flex-center',
       imgUrl: '../../assets/Alignment-icons/justify-center.png',
-
+      placeholderText: 'Justify center',
     },
     {
       JustifyClass: 'justify-content-flex-end',
       imgUrl: '../../assets/Alignment-icons/justify-right.png',
-
+      placeholderText: 'Justify right',
+    },
+    {
+      JustifyClass: 'justify-content-space-between',
+      imgUrl: '',
+      placeholderText: 'Justify space between',
     },
   ];
 
