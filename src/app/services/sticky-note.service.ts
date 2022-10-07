@@ -10,7 +10,8 @@ export class StickyNoteService {
   classes: any[] = [
     {
       AlignClass: 'align-content-flex-start',
-      imgUrl: '../../assets/Alignment-icons/align-top.png',
+      // imgUrl: '../../assets/Alignment-icons/align-top.png',
+      imgUrl: './assets/Alignment-icons/align-top.png',
       placeholderText: 'Align top',
     },
     {
