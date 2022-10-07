@@ -40,7 +40,7 @@ export class StickyNoteService {
     },
     {
       JustifyClass: 'justify-content-flex-end',
-      imgUrl: '../../assets/Alignment-icons/justify-right.png',
+      imgUrl: './assets/Alignment-icons/justify-right.png',
       placeholderText: 'Justify right',
     },
     {
