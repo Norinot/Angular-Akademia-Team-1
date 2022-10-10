@@ -92,7 +92,6 @@ export class StickyNoteService {
     this.notes.splice(index, 1, note);
   }
 
-
   public deleteNoteById(note: StickyNote) {
     const index = this.notes.findIndex((item) => item.id == note.id);
     this.notes.splice(index, 1);
