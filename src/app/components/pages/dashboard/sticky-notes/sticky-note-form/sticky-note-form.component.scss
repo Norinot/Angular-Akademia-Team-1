@@ -30,6 +30,10 @@ button[type=button] {
   background-color: #df4620;
 }
 
-button[type=button]:hover {
+button[type=button]:hover:not([disabled]) {
   background-color: #df4620;
+}
+
+button:disabled {
+  background-color: rgb(223, 70, 32, 0.5);
 }

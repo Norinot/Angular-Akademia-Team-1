@@ -2,6 +2,6 @@
   <input type="text" class="form-control" name="title" placeholder="sticky note title" formControlName="title"><br>
   <textarea cols="30" rows="10" type="text" class="form-control" name="content" placeholder="sticky note content" formControlName="content"></textarea>
   <br>
-  <button type="submit">Add Note</button>
-  <button (click)="deleteNote(currentNote)" type="button">Delete Note</button>
+  <button type="submit">{{ buttonText }}</button>
+  <button (click)="deleteNote(currentNote)" type="button" [disabled]="currentNote.id === 0">Delete Note</button>
 </form>
