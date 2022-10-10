@@ -3,6 +3,11 @@
   <li><a routerLink="main"  routerLinkActive="active">1. feladat</a></li>
   <li><a routerLink="content2"  routerLinkActive="active">2. feladat</a></li>
   <li><a routerLink="sticky-notes-container"  routerLinkActive="active">3. feladat</a></li>
+  <app-accordion [title]="'Demo title'" [text]="'Demo word demo word demo word demo word demo wordDemo word demo word demo word demo word demo wordDemo word demo word demo word demo word demo wordDemo word demo word demo word demo word demo word'"></app-accordion>
+  <app-accordion [title]="'Demo title'" [text]="'Demo word demo word demo word demo word demo wordDemo word demo word demo word demo word demo wordDemo word demo word demo word demo word demo wordDemo word demo word demo word demo word demo word'"></app-accordion>
 
   <button (click)="onLogout()" class="logout-btn">Logout</button>
 </ul>
+
+
+<!-- You may use the app accordion component via inputs, you can give the accordion a title with [title] and text with [text] they both accept strings and you can use multiple components if necesarry. If you do not give the component the said 2 attributes then the component will not render to the dom. -->

@@ -1,1 +1,14 @@
-<p>accordion works!</p>
+<div *ngIf="isDataPresent()">
+  <button
+    class="accordion"
+    (click)="toggleClass = !toggleClass"
+    [ngClass]="{ active: toggleClass }"
+  >
+    {{ title }}
+  </button>
+  <div class="slider" [ngClass]="{ sliderActive: toggleClass }">
+    <div>
+      <p>{{ text }}</p>
+    </div>
+  </div>
+</div>
