@@ -60,3 +60,17 @@ ul{
   justify-content: space-between;
 }
 
+.button-on-note {
+  margin: 10px;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: rgb(204, 204, 197);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #ccc;
+  }
+}
