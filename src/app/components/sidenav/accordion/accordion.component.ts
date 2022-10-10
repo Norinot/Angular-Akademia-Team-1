@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-accordion',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccordionComponent implements OnInit {
 
-  constructor() { }
+  toggleClass: boolean = false;
+  visible: boolean = true;
+  @Input() title?: string;
+  @Input() text?: string;
+
+  constructor() {
+
+   }
+
 
   ngOnInit(): void {
   }
 
+  isDataPresent(): boolean {
+    return this.title !== undefined && this.text !== undefined;
+  }
 }
