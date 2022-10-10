@@ -82,14 +82,24 @@ export class StickyNoteService {
     return this.notes;
   }
 
-  public getNotebyId(id: number) {
+  public getNoteById(id: number) {
     const index = this.notes.findIndex((item) => item.id == id);
     return this.notes[index];
   }
 
-  public deleteNote(note: StickyNote) {
+  public saveEditedNote(note: StickyNote) {
+    const index = this.notes.findIndex((item) => item.id == note.id);
+    this.notes.splice(index, 1, note);
+  }
+
+
+  public deleteNoteById(note: StickyNote) {
     const index = this.notes.findIndex((item) => item.id == note.id);
     this.notes.splice(index, 1);
+  }
+
+  public deleteAllNotes() {
+    return this.notes.splice(0, this.notes.length);
   }
 
   onAddStyling(item: any) {
