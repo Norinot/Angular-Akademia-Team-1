@@ -15,6 +15,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { StickyNoteFormComponent } from './components/pages/dashboard/sticky-notes/sticky-note-form/sticky-note-form.component';
 import { StickyNoteContainerComponent } from './components/pages/dashboard/sticky-notes/sticky-note-container/sticky-note-container.component';
 import { StickyNoteComponent } from './components/pages/dashboard/sticky-notes/sticky-note/sticky-note.component';
+import { AccordionComponent } from './components/sidenav/accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { StickyNoteComponent } from './components/pages/dashboard/sticky-notes/s
     LoginPageComponent,
     StickyNoteFormComponent,
     StickyNoteContainerComponent,
-    StickyNoteComponent
+    StickyNoteComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
