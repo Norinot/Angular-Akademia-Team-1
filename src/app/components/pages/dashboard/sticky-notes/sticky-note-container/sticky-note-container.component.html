@@ -1,6 +1,9 @@
 <div class="sticky-note-container">
   <div class="button-container">
-    <button [routerLink]="['sticky-note-form']" class="to-form-button">➕</button>
+    <button [routerLink]="['sticky-note-form', 0]" class="to-form-button">➕</button>
+    <button (click)="deleteAllNotes()">
+      <img src="./../../../../../../assets/Alignment-icons/delete.png" alt="delete all">
+    </button>
     <ng-container *ngFor="let item of stickyService.classes">
       <button class="button-first" (click)="stickyService.onAddStyling(item)" title="{{item.placeholderText}}" >
         <img src="{{ item.imgUrl }}" />

@@ -13,4 +13,8 @@ export class StickyNoteContainerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  deleteAllNotes() {
+    this.stickyService.deleteAllNotes();
+  }
+
 }

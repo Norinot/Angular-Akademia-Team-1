@@ -36,7 +36,7 @@ const routes: Routes = [
         children: [
           { path: '', redirectTo: 'sticky-note', pathMatch: 'full' },
           { path: 'sticky-note', component: StickyNoteComponent },
-          { path: 'sticky-note-form', component: StickyNoteFormComponent },
+          { path: 'sticky-note-form/:id', component: StickyNoteFormComponent },
         ],
       },
     ],

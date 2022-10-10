@@ -1,4 +1,6 @@
+import { StickyNote } from './../sticky-note.model';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StickyNoteService } from 'src/app/services/sticky-note.service';
 
 @Component({
@@ -8,9 +10,13 @@ import { StickyNoteService } from 'src/app/services/sticky-note.service';
 })
 export class StickyNoteComponent implements OnInit {
 
-  constructor(public stickyService: StickyNoteService) { }
+  constructor(public stickyService: StickyNoteService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+  }
+
+  deleteNote(note: StickyNote) {
+    this.stickyService.deleteNoteById(note);
   }
 
 }
