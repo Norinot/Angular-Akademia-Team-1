@@ -62,8 +62,10 @@ export class StickyNoteFormComponent implements OnInit {
   }
 
   deleteNote(currentNote: StickyNote) {
-    this.stickyService.deleteNoteById(currentNote);
-    this.router.navigate(['/dashboard/sticky-notes-container'])
+    if(currentNote.id !== 0) {
+      this.stickyService.deleteNoteById(currentNote);
+      this.router.navigate(['/dashboard/sticky-notes-container'])
+    }
   }
 
 }
