@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
 import { StickyNoteService } from 'src/app/services/sticky-note.service';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-sticky-note-container',
@@ -8,7 +10,19 @@ import { StickyNoteService } from 'src/app/services/sticky-note.service';
 })
 export class StickyNoteContainerComponent implements OnInit {
 
-  constructor(public stickyService: StickyNoteService) { }
+  hiddenBtn: boolean = false;
+
+  constructor(public stickyService: StickyNoteService, private router: Router) {
+    router.events.pipe(
+      filter(event => event instanceof NavigationStart),
+    ).subscribe((event) => {
+      if((event as NavigationStart).url.includes('/sticky-note-form/')) {
+        this.hiddenBtn = true;
+      } else {
+        this.hiddenBtn = false;
+      }
+    });
+  }
 
   ngOnInit(): void {
   }
