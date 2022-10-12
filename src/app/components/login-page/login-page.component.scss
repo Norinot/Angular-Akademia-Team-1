@@ -86,8 +86,13 @@
 .form-alert{
 
   //Font and text
-  color: #990000;
+  color: #f01515;
   font-weight: bold;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
+  margin: 4px 0 4px 0;
+  padding: 4px;
+  border-radius: 5px;
+
+  background-color: #193140;
 }

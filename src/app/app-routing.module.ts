@@ -14,6 +14,11 @@ import { AccordionComponent } from './components/sidenav/accordion/accordion.com
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'login',
     component: LoginPageComponent,
   },
   {
@@ -43,6 +48,8 @@ const routes: Routes = [
       { path: 'accordion', component: AccordionComponent },
     ],
   },
+  { path: '**', redirectTo: 'sticky-note'},
+
 ];
 
 @NgModule({

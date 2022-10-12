@@ -5,23 +5,30 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class LoginService {
-
   loggedIn: boolean = false;
 
   constructor(private router: Router) {}
 
   login(email: string, password: string) {
-    if (email === '' && password === '') {
-      this.loggedIn = true;
+    if (email === 'asd' && password === 'asd') {
+      localStorage.setItem('username', 'true');
       this.router.navigate(['dashboard']);
+      return true
     } else {
-      this.loggedIn = false;
-      console.log('failed login');
+      return false
     }
   }
 
-  logout() {
-    this.loggedIn = false;
-    this.router.navigate(['']);
+  logout(): void {
+    localStorage.removeItem('username')
+    this.router.navigate(['login'])
+  }
+
+  getUser(): string {
+    return localStorage.getItem('username') as string
+  }
+
+  isLoggedIn(): boolean {
+    return this.getUser() !== null
   }
 }

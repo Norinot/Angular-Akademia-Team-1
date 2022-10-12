@@ -1,13 +1,14 @@
 import { StickyNote } from './../components/pages/dashboard/sticky-notes/sticky-note.model';
 import { Injectable } from '@angular/core';
+import { Classes } from './classes';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StickyNoteService {
-  notes: Array<any> = [];
+  notes: Array<StickyNote> = [];
   valami: boolean = false;
-  classes: any[] = [
+  classes: Classes[] = [
     {
       AlignClass: 'align-content-flex-start',
       imgUrl: './assets/Alignment-icons/align-top.png',
@@ -101,7 +102,7 @@ export class StickyNoteService {
     return this.notes.splice(0, this.notes.length);
   }
 
-  onAddStyling(item: any) {
+  onAddStyling(item: Classes) {
     if (item.AlignClass) {
       if (item.AlignClass === this.selectedAlignContent) {
         // Ha megyegyezik egy kiválasztott classt
