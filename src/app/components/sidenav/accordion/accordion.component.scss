@@ -1,3 +1,6 @@
+.accordion-container{
+  width: 50%;
+}
 .accordion {
   background-color: #eee;
   color: #444;
@@ -29,12 +32,12 @@
 .sliderActive > div {
   margin-top: -100vh;
   transition: margin-top 0.4s ease-in-out;
-
   display: flex;
   justify-content: center;
 
 }
 .sliderActive > div {
+
   margin-top: 0;
   display: flex;
   justify-content: center;

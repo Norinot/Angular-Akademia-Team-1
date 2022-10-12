@@ -13,7 +13,8 @@ export class AccordionComponent implements OnInit {
   @Input() text?: string;
 
   constructor() {
-
+    this.title = 'Title';
+    this.text = 'Text';
    }
 
 

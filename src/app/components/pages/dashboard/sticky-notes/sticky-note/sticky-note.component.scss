@@ -1,3 +1,5 @@
+$width-of-sticky-notes: calc(100vw - 200px);
+
 h2 {
   font-weight: bold;
   font-size: 2rem;
@@ -15,7 +17,8 @@ li {
   list-style: none;
 }
 ul {
-  width: calc(100vw - 240px);
+  padding: 0;
+  width: $width-of-sticky-notes;
   height: calc(100vh - 60px);
   display: flex;
   flex-wrap: wrap;
@@ -35,6 +38,7 @@ li {
 ul{
   margin: 0;
 }
+
 .align-content-center {
   align-content: center;
 }

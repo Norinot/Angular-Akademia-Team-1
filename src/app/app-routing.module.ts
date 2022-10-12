@@ -9,6 +9,7 @@ import { Content2Component } from './components/pages/dashboard/content2/content
 import { StickyNoteComponent } from './components/pages/dashboard/sticky-notes/sticky-note/sticky-note.component';
 import { StickyNoteContainerComponent } from './components/pages/dashboard/sticky-notes/sticky-note-container/sticky-note-container.component';
 import { StickyNoteFormComponent } from './components/pages/dashboard/sticky-notes/sticky-note-form/sticky-note-form.component';
+import { AccordionComponent } from './components/sidenav/accordion/accordion.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,7 @@ const routes: Routes = [
           { path: 'sticky-note-form/:id', component: StickyNoteFormComponent },
         ],
       },
+      { path: 'accordion', component: AccordionComponent },
     ],
   },
 ];
