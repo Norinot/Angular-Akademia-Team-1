@@ -15,6 +15,7 @@ export class StickyNoteFormComponent implements OnInit {
   currentNote!: StickyNote;
   currentId!: number;
   newNote: StickyNote = new StickyNote();
+  buttonText: string = "";
 
   constructor(fb: FormBuilder, private stickyService: StickyNoteService, private router: Router, private route: ActivatedRoute) {
     this.notesForm = fb.group({
@@ -29,8 +30,10 @@ export class StickyNoteFormComponent implements OnInit {
   ngOnInit(): void {
     if (this.currentId == 0) {
       this.currentNote = this.newNote;
+      this.buttonText = "Add Note";
     } else {
       this.currentNote = this.stickyService.getNoteById(this.currentId);
+      this.buttonText = "Save Note";
 
       const { id, title, content } = this.currentNote;
       this.notesForm.patchValue({
@@ -62,8 +65,10 @@ export class StickyNoteFormComponent implements OnInit {
   }
 
   deleteNote(currentNote: StickyNote) {
-    this.stickyService.deleteNoteById(currentNote);
-    this.router.navigate(['/dashboard/sticky-notes-container'])
+    if(currentNote.id !== 0) {
+      this.stickyService.deleteNoteById(currentNote);
+      this.router.navigate(['/dashboard/sticky-notes-container'])
+    }
   }
 
 }

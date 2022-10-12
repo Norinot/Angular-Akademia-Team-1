@@ -8,9 +8,8 @@ input[type=text], textarea {
   box-sizing: border-box;
 }
 
-button[type=submit] {
+button {
   width: 20%;
-  background-color: #407344;
   color: white;
   padding: 14px 20px;
   margin: 20px;
@@ -19,6 +18,22 @@ button[type=submit] {
   cursor: pointer;
 }
 
+button[type=submit] {
+  background-color: #407344;
+}
+
 button[type=submit]:hover {
   background-color: #407344;
+}
+
+button[type=button] {
+  background-color: #df4620;
+}
+
+button[type=button]:hover:not([disabled]) {
+  background-color: #df4620;
+}
+
+button:disabled {
+  background-color: rgb(223, 70, 32, 0.5);
 }
