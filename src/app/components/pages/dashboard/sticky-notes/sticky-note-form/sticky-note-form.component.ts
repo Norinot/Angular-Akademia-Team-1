@@ -1,7 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { StickyNote } from './../sticky-note.model';
 import { StickyNoteService } from './../../../../../services/sticky-note.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
   templateUrl: './sticky-note-form.component.html',
   styleUrls: ['./sticky-note-form.component.scss']
 })
-export class StickyNoteFormComponent implements OnInit {
+export class StickyNoteFormComponent implements OnInit, OnChanges {
 
   notesForm: FormGroup;
   currentNote!: StickyNote;
@@ -25,6 +25,10 @@ export class StickyNoteFormComponent implements OnInit {
     });
 
     this.currentId = route.snapshot.params['id'];
+  }
+
+  ngOnChanges(): void {
+
   }
 
   ngOnInit(): void {
