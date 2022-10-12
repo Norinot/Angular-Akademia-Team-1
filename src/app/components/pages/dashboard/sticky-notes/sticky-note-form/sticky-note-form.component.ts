@@ -1,7 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { StickyNote } from './../sticky-note.model';
 import { StickyNoteService } from './../../../../../services/sticky-note.service';
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
   templateUrl: './sticky-note-form.component.html',
   styleUrls: ['./sticky-note-form.component.scss']
 })
-export class StickyNoteFormComponent implements OnInit, OnChanges {
+export class StickyNoteFormComponent implements OnInit {
 
   notesForm: FormGroup;
   currentNote!: StickyNote;
@@ -27,22 +27,24 @@ export class StickyNoteFormComponent implements OnInit, OnChanges {
     this.currentId = route.snapshot.params['id'];
   }
 
-  ngOnChanges(): void {
-
-  }
-
   ngOnInit(): void {
     if (this.currentId == 0) {
       this.currentNote = this.newNote;
       this.buttonText = "Add Note";
     } else {
-      this.currentNote = this.stickyService.getNoteById(this.currentId);
-      this.buttonText = "Save Note";
+      if(this.stickyService.getNoteById(this.currentId) === undefined) {
+        this.router.navigate(['/dashboard/sticky-notes-container']);
+        console.log('undefined');
 
-      const { id, title, content } = this.currentNote;
-      this.notesForm.patchValue({
-        id, title, content
-      })
+      } else {
+        this.currentNote = this.stickyService.getNoteById(this.currentId);
+        this.buttonText = "Save Note";
+
+        const { id, title, content } = this.currentNote;
+        this.notesForm.patchValue({
+          id, title, content
+        })
+      }
     }
   }
 
