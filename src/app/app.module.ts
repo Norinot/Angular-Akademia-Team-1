@@ -16,6 +16,7 @@ import { StickyNoteFormComponent } from './components/pages/dashboard/sticky-not
 import { StickyNoteContainerComponent } from './components/pages/dashboard/sticky-notes/sticky-note-container/sticky-note-container.component';
 import { StickyNoteComponent } from './components/pages/dashboard/sticky-notes/sticky-note/sticky-note.component';
 import { AccordionComponent } from './components/sidenav/accordion/accordion.component';
+import { GridComponent } from './components/pages/dashboard/grid/grid.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AccordionComponent } from './components/sidenav/accordion/accordion.com
     StickyNoteFormComponent,
     StickyNoteContainerComponent,
     StickyNoteComponent,
-    AccordionComponent
+    AccordionComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,

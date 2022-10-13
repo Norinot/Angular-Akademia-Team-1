@@ -10,6 +10,7 @@ import { StickyNoteComponent } from './components/pages/dashboard/sticky-notes/s
 import { StickyNoteContainerComponent } from './components/pages/dashboard/sticky-notes/sticky-note-container/sticky-note-container.component';
 import { StickyNoteFormComponent } from './components/pages/dashboard/sticky-notes/sticky-note-form/sticky-note-form.component';
 import { AccordionComponent } from './components/sidenav/accordion/accordion.component';
+import { GridComponent } from './components/pages/dashboard/grid/grid.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,7 @@ const routes: Routes = [
         ],
       },
       { path: 'accordion', component: AccordionComponent },
+      { path: 'grid', component: GridComponent },
     ],
   },
   { path: '**', redirectTo: 'sticky-note'},
