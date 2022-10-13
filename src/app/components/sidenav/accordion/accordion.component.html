@@ -1,18 +1,10 @@
-<div class="accordion-container" id="accordion-container">
-  <button
-    class="accordion"
-    (click)="toggleClass = !toggleClass"
-    [ngClass]="{ active: toggleClass }"
-  >
-    {{ title }}
-  </button>
-  <div
-    id="accordion-body"
-    class="slider"
-    [ngClass]="{ sliderActive: toggleClass }"
-  >
-    <div>
-      <p>{{ text }}</p>
-    </div>
-  </div>
-</div>
+<mat-accordion class="accordion-container" id="accordion-container">
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ title }}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p class="slider">{{ text }}</p>
+  </mat-expansion-panel>
+</mat-accordion>

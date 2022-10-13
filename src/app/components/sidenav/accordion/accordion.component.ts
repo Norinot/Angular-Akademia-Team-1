@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./accordion.component.scss']
 })
 export class AccordionComponent implements OnInit {
-
+  panelOpenState: boolean = false;
   toggleClass: boolean = false;
   visible: boolean = true;
   @Input() title?: string;
