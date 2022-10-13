@@ -14,4 +14,9 @@ app-sidenav {
   top: 0;
   z-index: 100;
 }
-
+app-grid{
+  //give the grid a height of 100% so it fills the container
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
