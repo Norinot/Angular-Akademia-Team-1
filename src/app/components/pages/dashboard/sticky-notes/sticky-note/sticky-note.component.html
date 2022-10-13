@@ -1,12 +1,12 @@
 <ul [ngClass]="stickyService.selectedAlignContent + ' ' + stickyService.selectedJustifyContent">
   <li *ngFor="let item of stickyService.notes">
     <div>
-      <h2>{{item.title}}</h2>
-      <p>{{item.content}}</p>
-      <button [routerLink]="['../sticky-note-form', item.id]" class="button-on-note">
+      <h2 id="sticky-note-title">{{item.title}}</h2>
+      <p id="card-content">{{item.content}}</p>
+      <button id="sticky-note-button" [routerLink]="['../sticky-note-form', item.id]" class="button-on-note">
       <img src="./assets/Alignment-icons/edit.png" alt="edit">
     </button>
-      <button (click)="deleteNote(item)" class="button-on-note">
+      <button id="sticky-note-button" (click)="deleteNote(item)" class="button-on-note">
       <img src="./assets/Alignment-icons/remove.png" alt="delete">
     </button>
     </div>

@@ -1,13 +1,5 @@
 
-
-
-
-
-
-
-
-
-  <div class="accordion-container">
+  <div class="accordion-container" id="accordion-container">
     <button
       class="accordion"
       (click)="toggleClass = !toggleClass"
@@ -15,7 +7,7 @@
     >
       {{ title }}
     </button>
-    <div class="slider" [ngClass]="{ sliderActive: toggleClass }">
+    <div id="accordion-body" class="slider" [ngClass]="{ sliderActive: toggleClass }">
       <div>
         <p>{{ text }}</p>
       </div>
