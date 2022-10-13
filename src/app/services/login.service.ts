@@ -9,7 +9,7 @@ export class LoginService {
 
   constructor(private router: Router) {}
 
-  login(email: string, password: string) {
+  login(email: string, password: string): boolean {
     if (email === 'asd' && password === 'asd') {
       localStorage.setItem('username', 'true');
       this.router.navigate(['dashboard']);

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 import { StickyNoteService } from 'src/app/services/sticky-note.service';
 import { filter } from 'rxjs';
+import { StickyNote } from '../sticky-note.model';
 
 @Component({
   selector: 'app-sticky-note-container',
@@ -27,7 +28,7 @@ export class StickyNoteContainerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  deleteAllNotes() {
+  deleteAllNotes(): void {
     this.stickyService.deleteAllNotes();
   }
 

@@ -1,13 +1,14 @@
 import { StickyNote } from './../components/pages/dashboard/sticky-notes/sticky-note.model';
 import { Injectable } from '@angular/core';
+import { Classes } from './classes';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StickyNoteService {
-  notes: Array<any> = [];
+  notes: Array<StickyNote> = [];
   valami: boolean = false;
-  classes: any[] = [
+  classes: Classes[] = [
     {
       AlignClass: 'align-content-flex-start',
       imgUrl: './assets/Alignment-icons/align-top.png',
@@ -73,35 +74,35 @@ export class StickyNoteService {
     ];
   }
 
-  public addNote(note: StickyNote) {
+  public addNote(note: StickyNote): void {
     note.id = this.notes.length + 1;
     this.notes.push(note);
   }
 
-  public getNotes() {
+  public getNotes(): Array<StickyNote> {
     return this.notes;
   }
 
-  public getNoteById(id: number) {
+  public getNoteById(id: number): StickyNote {
     const index = this.notes.findIndex((item) => item.id == id);
     return this.notes[index];
   }
 
-  public saveEditedNote(note: StickyNote) {
+  public saveEditedNote(note: StickyNote): void {
     const index = this.notes.findIndex((item) => item.id == note.id);
     this.notes.splice(index, 1, note);
   }
 
-  public deleteNoteById(note: StickyNote) {
+  public deleteNoteById(note: StickyNote): void {
     const index = this.notes.findIndex((item) => item.id == note.id);
     this.notes.splice(index, 1);
   }
 
-  public deleteAllNotes() {
+  public deleteAllNotes(): StickyNote[] {
     return this.notes.splice(0, this.notes.length);
   }
 
-  onAddStyling(item: any) {
+  onAddStyling(item: Classes): void {
     if (item.AlignClass) {
       if (item.AlignClass === this.selectedAlignContent) {
         // Ha megyegyezik egy kiválasztott classt

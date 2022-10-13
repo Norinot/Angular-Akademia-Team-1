@@ -60,7 +60,7 @@ export class StickyNoteFormComponent implements OnInit {
     return this.notesForm.get('content') as FormControl;
   }
 
-  onSubmit() {
+  onSubmit(): void {
     const savedNote: StickyNote = this.notesForm.value as StickyNote;
     if(this.currentId == 0) {
       this.stickyService.addNote(savedNote);
@@ -70,7 +70,7 @@ export class StickyNoteFormComponent implements OnInit {
     this.router.navigate(['/dashboard/sticky-notes-container'])
   }
 
-  deleteNote(currentNote: StickyNote) {
+  deleteNote(currentNote: StickyNote): void {
     if(currentNote.id !== 0) {
       this.stickyService.deleteNoteById(currentNote);
       this.router.navigate(['/dashboard/sticky-notes-container'])

@@ -15,7 +15,7 @@ export class StickyNoteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  deleteNote(note: StickyNote) {
+  deleteNote(note: StickyNote): void {
     this.stickyService.deleteNoteById(note);
   }
 
