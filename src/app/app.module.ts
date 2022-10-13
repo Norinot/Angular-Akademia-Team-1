@@ -17,6 +17,7 @@ import { StickyNoteContainerComponent } from './components/pages/dashboard/stick
 import { StickyNoteComponent } from './components/pages/dashboard/sticky-notes/sticky-note/sticky-note.component';
 import { AccordionComponent } from './components/sidenav/accordion/accordion.component';
 import { GridComponent } from './components/pages/dashboard/grid/grid.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { GridComponent } from './components/pages/dashboard/grid/grid.component'
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
