@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppModule } from 'src/app/app.module';
 
 import { StickyNoteContainerComponent } from './sticky-note-container.component';
 
@@ -8,7 +9,8 @@ describe('StickyNoteContainerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StickyNoteContainerComponent ]
+      declarations: [ StickyNoteContainerComponent ],
+      imports: [AppModule]
     })
     .compileComponents();
 
