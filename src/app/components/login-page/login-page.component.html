@@ -1,25 +1,38 @@
 <div class="form-container">
   <form [formGroup]="login_form" (ngSubmit)="onSubmit()" class="login-form">
-    <div class="input-group">
-      <input
-        class="form-input"
-        type="text"
-        placeholder="Email address"
-        formControlName="email"
-        id="email"
-      />
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input
+          matInput
+          placeholder="pat@example.com"
+          formControlName="email"
+          id="email"
+          required
+        />
+      </mat-form-field>
     </div>
-
-    <div class="input-group">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
       <input
-        class="form-input"
-        type="password"
-        placeholder="Password"
         formControlName="password"
-        id="password"
+        matInput
+        [type]="hide ? 'password' : 'text'"
       />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-flat-button color="primary" class="form-button" type="submit">LOGIN</button>
+    <div *ngIf="invalidLoginMessage" class="form-alert">
+      Incorrect credentials! Please check your email and password.
     </div>
-    <button class="form-button" type="submit">LOGIN</button>
-    <div *ngIf="invalidLoginMessage" class="form-alert">Incorrect credentials! Please check your email and password.</div>
   </form>
 </div>
+

@@ -26,6 +26,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatInputModule,
     MatSidenavModule,
     MatExpansionModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatIconModule
 
   ],
   providers: [],

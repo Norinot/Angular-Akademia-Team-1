@@ -14,7 +14,7 @@ export class AccordionComponent implements OnInit {
 
   constructor() {
     this.title = 'Title';
-    this.text = 'Text';
+    this.text = 'TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText';
    }
 
 

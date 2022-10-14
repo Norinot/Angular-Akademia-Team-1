@@ -1,14 +1,13 @@
-<ul [ngClass]="stickyService.selectedAlignContent + ' ' + stickyService.selectedJustifyContent">
-  <li *ngFor="let item of stickyService.notes">
-    <div>
-      <h2 id="sticky-note-title">{{item.title}}</h2>
-      <p id="card-content">{{item.content}}</p>
-      <button id="sticky-note-button" [routerLink]="['../sticky-note-form', item.id]" class="button-on-note">
-      <img src="./assets/Alignment-icons/edit.png" alt="edit">
-    </button>
-      <button id="sticky-note-button" (click)="deleteNote(item)" class="button-on-note">
-      <img src="./assets/Alignment-icons/remove.png" alt="delete">
-    </button>
-    </div>
-  </li>
-</ul>
+<div [ngClass]="stickyService.selectedAlignContent + ' ' + stickyService.selectedJustifyContent" class="card-container">
+  <mat-card class="card" *ngFor="let item of stickyService.notes">
+    <mat-card-title id="sticky-note-title">{{ item.title }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ item.content }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button id="sticky-note-button" [routerLink]="['../sticky-note-form', item.id]"
+        class="button-edit"></button>
+      <button class="button-delete" (click)="deleteNote(item)" id="sticky-note-button" mat-flat-button></button>
+    </mat-card-actions>
+  </mat-card>
+</div>

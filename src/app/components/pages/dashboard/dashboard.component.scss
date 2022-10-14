@@ -1,3 +1,5 @@
+$width-of-contents: calc(100vw - 200px);
+
 app-sidenav {
   position: fixed;
   top: 0;
@@ -7,13 +9,12 @@ app-sidenav {
   z-index: 1000;
 }
 .container {
-  position: absolute;
-  height: 100%;
-  width: calc(100% - 200px);
-  right: 0;
-  top: 0;
-  z-index: 100;
+  margin-left: 1px;
+  width: $width-of-contents;
+  float: right;
+  height: 100vh;
 }
+
 app-grid{
   //give the grid a height of 100% so it fills the container
   position: absolute;

@@ -16,6 +16,7 @@ import { LoginService } from 'src/app/services/login.service';
 export class LoginPageComponent implements OnInit, OnDestroy {
   login_form: FormGroup;
   invalidLoginMessage: boolean = false;
+  hide = true;
 
   constructor(fb: FormBuilder, public loginService: LoginService) {
     this.login_form = fb.group({

@@ -1,7 +1,49 @@
-<form [formGroup]="notesForm" (ngSubmit)="onSubmit()">
-  <input type="text" class="form-control" name="title" placeholder="sticky note title" formControlName="title"><br>
-  <textarea cols="30" rows="10" type="text" class="form-control" name="content" placeholder="sticky note content" formControlName="content"></textarea>
-  <br>
-  <button type="submit">{{ buttonText }}</button>
-
+<form [formGroup]="notesForm" (ngSubmit)="onSubmit()" class="form-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Sticky Note Title</mat-label>
+    <input
+      matInput
+      class="form-control"
+      matInput
+      class="form-control"
+      type="text"
+      class="form-control"
+      name="title"
+      formControlName="title"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Sticky Note content</mat-label>
+    <textarea
+      rows="5"
+      matInput
+      type="text"
+      class="form-control"
+      name="content"
+      formControlName="content"
+    ></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" class="form-submit-button">
+    {{ buttonText }}
+  </button>
 </form>
+
+<!-- <form [formGroup]="notesForm" (ngSubmit)="onSubmit()">
+  <input
+    type="text"
+    class="form-control"
+    name="title"
+    placeholder="sticky note title"
+    formControlName="title"
+  /><br />
+  <textarea
+    cols="30"
+    rows="10"
+    type="text"
+    class="form-control"
+    name="content"
+    placeholder="sticky note content"
+    formControlName="content"
+  ></textarea>
+  <br />
+</form> -->

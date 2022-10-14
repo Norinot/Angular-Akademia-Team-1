@@ -1,16 +1,37 @@
 <div class="sticky-note-container">
   <div class="button-container">
-    <button [routerLink]="['sticky-note-form', 0]" class="to-form-button">➕</button>
-    <button (click)="deleteAllNotes()" class="to-form-button" [disabled]="hiddenBtn">
-      <img src="./assets/Alignment-icons/delete.png" alt="delete all">
+    <button
+      mat-mini-fab
+      [routerLink]="['sticky-note-form', 0]"
+      class="to-form-button"
+    >
+      ➕
+    </button>
+    <button
+      mat-mini-fab
+      (click)="deleteAllNotes()"
+      class="to-form-button"
+      [disabled]="hiddenBtn"
+    >
+      <img src="./assets/Alignment-icons/delete.png" alt="delete all" />
     </button>
     <ng-container *ngFor="let item of stickyService.classes">
-      <button class="button-first" (click)="stickyService.onAddStyling(item)" title="{{item.placeholderText}}"
+      <!-- <button class="button-first" (click)="stickyService.onAddStyling(item)" title="{{item.placeholderText}}"
       [disabled]="hiddenBtn" >
+        <img src="{{ item.imgUrl }}" />
+
+      </button> -->
+      <button
+        class="button-first"
+        mat-mini-fab
+        color="none"
+        (click)="stickyService.onAddStyling(item)"
+        title="{{ item.placeholderText }}"
+        [disabled]="hiddenBtn"
+      >
         <img src="{{ item.imgUrl }}" />
       </button>
     </ng-container>
   </div>
   <router-outlet></router-outlet>
 </div>
-

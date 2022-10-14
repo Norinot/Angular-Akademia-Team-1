@@ -1,46 +1,42 @@
 $width-of-sticky-notes: calc(100vw - 200px);
 
-h2 {
-  font-weight: bold;
-  font-size: 2rem;
+.card-container {
 
-  overflow-wrap: break-word;
-}
-
-p {
-  font-size: 1rem;
-  font-weight: normal;
-
-  overflow-wrap: break-word;
-}
-
-ul,
-li {
-  list-style: none;
-}
-ul {
   padding: 0;
   width: $width-of-sticky-notes;
   height: calc(100vh - 60px);
   display: flex;
   flex-wrap: wrap;
+
 }
-ul li div {
+.card-container .card div {
   text-decoration: none;
   color: #000;
-  background: #ffc;
   display: block;
-  width: 10em;
   padding: 1em;
   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
 }
-li {
+.card {
+  display: flex;
+  flex-wrap: wrap;
   margin: 1em;
-}
-ul{
-  margin: 0;
-}
+  background: #ffc;
+  width: 10em;
 
+  flex-direction: column;
+  justify-content: space-between;
+
+  word-wrap: break-word;
+}
+.card-container{
+  margin: 0;
+  align-content: flex-start;
+}
+mat-card-actions{
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
 .align-content-center {
   align-content: center;
 }
@@ -66,17 +62,32 @@ ul{
   justify-content: space-between;
 }
 
-.button-on-note {
-  margin: 10px;
-  margin-top: 10px;
+.button-delete{
   width: 40px;
   height: 40px;
   cursor: pointer;
+
+  background: url(../../../../../../assets/Alignment-icons/remove.png) no-repeat center center;
   background-color: rgb(204, 204, 197);
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  &:hover {
-    background-color: #ccc;
-  }
+
+  border-radius: 15px;
+  padding: 0;
+}
+.button-edit{
+  height: 40px;
+  cursor: pointer;
+
+  background: url(../../../../../../assets/Alignment-icons/edit.png) no-repeat center center;
+  background-color: rgb(204, 204, 197);
+
+  border-radius: 15px;
+  padding: 0;
+}
+.button-delete, .button-edit{
+  margin: 10px 2.5px 0 2.5px;
+}
+
+.button-edit:hover, .button-delete:hover{
+  transition: 0.3s ease-in-out;
+  background-color: rgb(120, 120, 120);
 }
