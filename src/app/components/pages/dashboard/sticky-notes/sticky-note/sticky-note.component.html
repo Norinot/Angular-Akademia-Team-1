@@ -1,5 +1,5 @@
-<div [ngClass]="stickyService.selectedAlignContent + ' ' + stickyService.selectedJustifyContent" class="card-container">
-  <mat-card class="card" *ngFor="let item of stickyService.notes">
+<div id="sticky-note-list" [ngClass]="stickyService.selectedAlignContent + ' ' + stickyService.selectedJustifyContent" class="card-container">
+  <mat-card class="card" id="sticky-note-list-item" *ngFor="let item of notes">
     <mat-card-title id="sticky-note-title">{{ item.title }}</mat-card-title>
     <mat-card-content>
       <p>{{ item.content }}</p>
@@ -7,7 +7,7 @@
     <mat-card-actions>
       <button mat-flat-button id="sticky-note-button" [routerLink]="['../sticky-note-form', item.id]"
         class="button-edit"></button>
-      <button class="button-delete" (click)="deleteNote(item)" id="sticky-note-button" mat-flat-button></button>
+      <button class="button-delete" (click)="deleteNote(item)" id="sticky-note-delete-button" mat-flat-button></button>
     </mat-card-actions>
   </mat-card>
 </div>
