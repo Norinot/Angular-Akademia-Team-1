@@ -1,180 +1,32 @@
-.container {
-  margin: auto;
-  height: 30%;
-  width: 30%;
+.grid-container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 2fr 1fr;
-  gap: 1px;
-  grid-template-areas:
-    "grid-item-1 grid-item-2 grid-item-2"
-    "grid-item-3 grid-item-3 grid-item-3";
-  margin-bottom: 15px;
-  margin-top: 30px;
-}
-.grid-item-1 {
-  grid-area: grid-item-1;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
-}
-.grid-item-2 {
-  grid-area: grid-item-2;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
+  grid-template-columns: 1fr 1fr;
 }
 
-.grid-item-3 {
-  grid-area: grid-item-3;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
+.mat-grid-container {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.container-2 {
-  margin: auto;
-  display: grid;
-  height: 30%;
-  width: 30%;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "left-grid-3 grid-right-1"
-    "left-grid-3 grid-right-2"
-    "left-grid-3 grid-right-3";
-  margin-bottom: 15px;
+.number {
+  @extend .mat-grid-container;
+  font-size: 300px;
 }
 
-.left-grid-3 {
-  grid-area: left-grid-3;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
+.mat-grid-list {
+  padding-top: 25px;
+  padding-bottom: 650px !important;
+  width: 600px;
 }
 
-.grid-right-1 {
-  grid-area: grid-right-1;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
+img {
+  // min-width: 100vw;
+  // min-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
 }
-
-.grid-right-2 {
-  grid-area: grid-right-2;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
-}
-
-.grid-right-3 {
-  grid-area: grid-right-3;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
-}
-
-.container-3 {
-  margin: auto;
-  width: 30%;
-  height: 30%;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
-  grid-template-rows: 4fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  gap: 1px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "grid-group-left grid-group-left grid-group-right grid-group-right"
-    "bottom-left-grid middle-first middle-first bottom-right-grid"
-    "bottom-left-grid middle-second middle-second bottom-right-grid";
-}
-
-.grid-group-left {
-  grid-area: grid-group-left;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
-}
-
-.grid-group-right {
-  grid-area: grid-group-right;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
-}
-
-.bottom-left-grid {
-  grid-area: bottom-left-grid;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
-}
-
-.bottom-right-grid {
-  grid-area: bottom-right-grid;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
-}
-
-.middle-first {
-  grid-area: middle-first;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
-}
-
-.middle-second {
-  grid-area: middle-second;
-  background: url(../../../../../assets/astronaut_art_space_129529_3840x2160.jpg)
-    no-repeat center;
-  background-size: cover;
-}
-
-// .container-3 {  display: grid;
-//   grid-template-columns: 1fr 1fr 1fr 1fr;
-//   grid-template-rows: 2fr 1fr;
-//   gap: 0px 0px;
-//   grid-auto-flow: row;
-//   grid-template-areas:
-//     "left-grid-group left-grid-group right-grid-group right-grid-group"
-//     "bottom-grid-group bottom-grid-group bottom-grid-group bottom-grid-group";
-// }
-
-// .left-grid-group { grid-area: left-grid-group; }
-
-// .right-grid-group { grid-area: right-grid-group; }
-
-// .bottom-grid-group {  display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-template-rows: 1fr 1fr 1fr;
-//   gap: 0px 0px;
-//   grid-auto-flow: row;
-//   grid-template-areas:
-//     "left-small middle-grid-group right-small"
-//     "left-small middle-grid-group right-small"
-//     "left-small middle-grid-group right-small";
-//   grid-area: bottom-grid-group;
-// }
-
-// .middle-grid-group {  display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-template-rows: 1fr 1fr 1fr 1fr;
-//   gap: 0px 0px;
-//   grid-auto-flow: row;
-//   grid-template-areas:
-//     ". . ."
-//     ". . ."
-//     "bottom-group-2 bottom-group-2 bottom-group-2"
-//     "bottom-group-2 bottom-group-2 bottom-group-2";
-//   grid-area: middle-grid-group;
-// }
-
-// .bottom-group-2 { grid-area: bottom-group-2; }
-
-// .left-small { grid-area: left-small; }
-
-// .right-small { grid-area: right-small; }
