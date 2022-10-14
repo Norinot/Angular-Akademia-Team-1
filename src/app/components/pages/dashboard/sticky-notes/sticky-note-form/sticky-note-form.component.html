@@ -1,10 +1,9 @@
 <form [formGroup]="notesForm" (ngSubmit)="onSubmit()" class="form-container">
   <mat-form-field appearance="fill">
-    <mat-label>Sticky Note Title</mat-label>
+    <!-- <mat-label>Sticky Note Title</mat-label> -->
     <input
       matInput
-      class="form-control"
-      matInput
+      placeholder="Sticky Note Title"
       class="form-control"
       type="text"
       class="form-control"
@@ -13,10 +12,11 @@
     />
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>Sticky Note content</mat-label>
+    <!-- <mat-label>Sticky Note content</mat-label> -->
     <textarea
       rows="5"
       matInput
+      placeholder="Sticky Note content"
       type="text"
       class="form-control"
       name="content"
