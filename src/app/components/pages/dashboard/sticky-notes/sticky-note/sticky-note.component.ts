@@ -10,6 +10,8 @@ import { StickyNoteService } from 'src/app/services/sticky-note.service';
 })
 export class StickyNoteComponent implements OnInit {
 
+  notes: StickyNote[] = this.stickyService.notes;
+
   constructor(public stickyService: StickyNoteService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
