@@ -27,23 +27,22 @@ describe('StickyNoteComponent', () => {
   });
 
   it('should add note', () => {
-    console.log('lengthBeforeAdd', el.querySelectorAll('#sticky-note-list-item').length);
+    const lengthBefore = component.notes.length;
 
-    component.notes.push({id: 4, title: "Note4", content: "something"});
+    component.notes.push({id: 444, title: "Note444", content: "something"});
 
     fixture.detectChanges();
 
-    expect(el.querySelectorAll('#sticky-note-list-item').length).toBe(4);
+    expect(el.querySelectorAll('#sticky-note-list-item').length).withContext('Note items must be more by one than before').toBe(lengthBefore + 1);
   });
 
   it('should delete a note', () => {
-    console.log('lengthBeforeDelete', el.querySelectorAll('#sticky-note-list-item').length);
-
+    const lengthBefore = component.notes.length;
     const button: HTMLButtonElement = el.querySelector('#sticky-note-delete-button');
 
     button.dispatchEvent(new Event('click'));
     fixture.detectChanges();
 
-    expect(el.querySelectorAll('#sticky-note-list-item').length).toBe(2);
+    expect(el.querySelectorAll('#sticky-note-list-item').length).withContext('Note items must be less by one than before').toBe(lengthBefore - 1);
   });
 });
