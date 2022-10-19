@@ -111,7 +111,6 @@ export class StickyNoteService {
         this.selectedAlignContent = item.AlignClass;
       }
     }
-    console.log(item.AlignClass);
 
     if (item.JustifyClass) {
       if (item.JustifyClass === this.selectedJustifyContent) {
